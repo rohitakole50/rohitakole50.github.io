@@ -5,4 +5,4 @@ MS in Business Analytics and Project Management
 
 ### Projects
 
-# I love you boo
+# Data Analytics
