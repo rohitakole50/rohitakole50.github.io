@@ -2560,7 +2560,8 @@ input, select, textarea {
 	}
 
 		.work-item .image {
-			margin: 0 0 1.5em 0;
+			margin: 0 0 1em 0;
+			display: block;
 		}
 
 		.work-item h3 {
