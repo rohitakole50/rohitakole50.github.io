@@ -138,8 +138,9 @@
 		document.getElementById("dataAnalytics").classList.add("active");
 	});
 
+	// Contact Form Submission
 	document.getElementById('contactForm').addEventListener('submit', function(event) {
-    	event.preventDefault(); // Prevent the form from submitting the default way
+		event.preventDefault(); // Prevent the default form submission
 
 		// Create a new FormData object
 		var formData = new FormData(this);
@@ -151,6 +152,7 @@
 		})
 		.then(response => response.text())
 		.then(responseText => {
+			console.log(responseText); // For debugging
 			if (responseText.trim() === 'success') {
 				// Show the success message
 				document.getElementById('successMessage').style.display = 'block';
@@ -163,7 +165,7 @@
 		.catch(error => {
 			console.error('Error:', error);
 			alert('There was an error submitting your message. Please try again.');
-    	});
+		});
 	});
 
 })(jQuery);

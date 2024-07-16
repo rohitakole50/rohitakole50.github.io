@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     // Your email address where you want to receive the messages
-    $to = 'rohit.akole@uconn.edu';
+    $to = 'rohit.akole@uconn.edu'; // Replace with your actual email address
 
     // Email subject
     $subject = 'New Contact Form Submission';
@@ -19,9 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email
     if (mail($to, $subject, $body, $headers)) {
-        echo 'Thank you for contacting. I will get back to you shortly.';
+        // On successful email send, return a success message
+        echo 'success';
     } else {
-        echo 'There was an error sending your message. Please try again later.';
+        // On failure, return an error message
+        echo 'error';
     }
 } else {
     echo 'Invalid request.';
