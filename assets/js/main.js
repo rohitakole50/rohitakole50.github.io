@@ -142,32 +142,33 @@
 	document.getElementById('contactForm').addEventListener('submit', function(event) {
 		event.preventDefault(); // Prevent the default form submission
 
-		// Create a new FormData object
-		var formData = new FormData(this);
+		var form = event.target;
+		var data = new FormData(form);
 
-		// Send the form data using fetch API
-		fetch('send_email.php', {
+		fetch(form.action, {
 			method: 'POST',
-			body: formData
-		})
-		.then(response => response.text())
-		.then(responseText => {
-			console.log(responseText); // For debugging
-			if (responseText.trim() === 'success') {
-				// Show the success message
-				document.getElementById('successMessage').style.display = 'block';
-				// Clear the form fields
-				document.getElementById('contactForm').reset();
-			} else {
-				console.error('Error response:', responseText); // Log the error response
-				alert('There was an error submitting your message. Please try again.');
+			body: data,
+			headers: {
+				'Accept': 'application/json'
 			}
-		})
-		.catch(error => {
-			console.error('Fetch error:', error); // Log the fetch error
+		}).then(response => {
+			if (response.ok) {
+				document.getElementById('successMessage').style.display = 'block';
+				form.reset();
+			} else {
+				response.json().then(data => {
+					if (Object.hasOwn(data, 'errors')) {
+						alert(data["errors"].map(error => error["message"]).join(", "));
+					} else {
+						alert('There was an error submitting your message. Please try again.');
+					}
+				})
+			}
+		}).catch(error => {
 			alert('There was an error submitting your message. Please try again.');
 		});
 	});
+
 
 
 })(jQuery);
