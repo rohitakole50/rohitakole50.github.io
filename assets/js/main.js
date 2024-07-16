@@ -159,13 +159,15 @@
 				// Clear the form fields
 				document.getElementById('contactForm').reset();
 			} else {
+				console.error('Error response:', responseText); // Log the error response
 				alert('There was an error submitting your message. Please try again.');
 			}
 		})
 		.catch(error => {
-			console.error('Error:', error);
+			console.error('Fetch error:', error); // Log the fetch error
 			alert('There was an error submitting your message. Please try again.');
 		});
 	});
+
 
 })(jQuery);

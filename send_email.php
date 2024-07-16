@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect the form data
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $message = htmlspecialchars(trim($_POST['message']));
 
     // Your email address where you want to receive the messages
     $to = 'rohit.akole@uconn.edu'; // Replace with your actual email address
@@ -23,9 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo 'success';
     } else {
         // On failure, return an error message
+        error_log('Email sending failed.');
         echo 'error';
     }
 } else {
+    error_log('Invalid request method.');
     echo 'Invalid request.';
 }
 ?>
