@@ -114,22 +114,28 @@
 
 		});
 	// Tab Functionality
-		window.openTab = function(tabName) {
-			// Hide all tab contents
-			const tabContents = document.querySelectorAll('.tab-content');
-			tabContents.forEach(content => {
-				content.classList.remove('active');
-			});
+	window.openTab = function(event, tabName) {
+		// Hide all tab contents
+		const tabContents = document.querySelectorAll('.tab-content');
+		tabContents.forEach(content => {
+			content.classList.remove('active');
+		});
 
-			// Remove active class from all tab links
-			const tabLinks = document.querySelectorAll('.tab-link');
-			tabLinks.forEach(link => {
-				link.classList.remove('active');
-			});
+		// Remove active class from all tab links
+		const tabLinks = document.querySelectorAll('.tab-link');
+		tabLinks.forEach(link => {
+			link.classList.remove('active');
+		});
 
-			// Show the selected tab content and add active class to the corresponding button
-			document.getElementById(tabName).classList.add('active');
-			document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add('active');
+		// Show the selected tab content and add active class to the corresponding button
+		document.getElementById(tabName).classList.add('active');
+		event.currentTarget.classList.add('active');
 	};
+
+	// Set default tab to be open
+	document.addEventListener("DOMContentLoaded", function() {
+		document.getElementById("dataAnalytics").classList.add("active");
+	});
+
 
 })(jQuery);
