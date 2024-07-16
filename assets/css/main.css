@@ -2555,8 +2555,8 @@ input, select, textarea {
 
 	.work-item {
 		margin: 0 0 2em 0;
-		position: relative;
-		padding-bottom: 2em;
+		/*position: relative;*/
+		/*padding-bottom: 2em;*/
 	}
 
 		.work-item .image {
