@@ -131,4 +131,5 @@
 			document.getElementById(tabName).classList.add('active');
 			document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add('active');
 		};
+
 })(jQuery);
