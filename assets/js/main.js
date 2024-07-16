@@ -115,6 +115,7 @@
 		});
 	// Tab Functionality
 	window.openTab = function(event, tabName) {
+		console.log("Tab clicked: " + tabName);
 		// Hide all tab contents
 		const tabContents = document.querySelectorAll('.tab-content');
 		tabContents.forEach(content => {
@@ -136,6 +137,5 @@
 	document.addEventListener("DOMContentLoaded", function() {
 		document.getElementById("dataAnalytics").classList.add("active");
 	});
-
 
 })(jQuery);
