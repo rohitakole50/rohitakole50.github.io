@@ -122,9 +122,9 @@
 			});
 
 			// Remove active class from all tab buttons
-			const tabButtons = document.querySelectorAll('.tab-button');
-			tabButtons.forEach(button => {
-				button.classList.remove('active');
+			const tabButtons = document.querySelectorAll('.tab-link');
+			tabLinks.forEach(link => {
+				link.classList.remove('active');
 			});
 
 			// Show the selected tab content and add active class to the corresponding button
