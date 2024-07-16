@@ -138,4 +138,32 @@
 		document.getElementById("dataAnalytics").classList.add("active");
 	});
 
+	document.getElementById('contactForm').addEventListener('submit', function(event) {
+    	event.preventDefault(); // Prevent the form from submitting the default way
+
+		// Create a new FormData object
+		var formData = new FormData(this);
+
+		// Send the form data using fetch API
+		fetch('send_email.php', {
+			method: 'POST',
+			body: formData
+		})
+		.then(response => response.text())
+		.then(responseText => {
+			if (responseText.trim() === 'success') {
+				// Show the success message
+				document.getElementById('successMessage').style.display = 'block';
+				// Clear the form fields
+				document.getElementById('contactForm').reset();
+			} else {
+				alert('There was an error submitting your message. Please try again.');
+			}
+		})
+		.catch(error => {
+			console.error('Error:', error);
+			alert('There was an error submitting your message. Please try again.');
+    	});
+	});
+
 })(jQuery);
