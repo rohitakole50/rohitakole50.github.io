@@ -3364,3 +3364,7 @@ input, select, textarea {
         padding: 1em 0.5em; /* Further adjusted padding */
     }
 }
+
+#header .icons a {
+			color: rgba(255, 255, 255, 0.4);
+		}
