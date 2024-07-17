@@ -3115,7 +3115,7 @@ input, select, textarea {
 				background-size: auto,							cover;
 				bottom: auto;
 				left: auto;
-				padding: 4em 4em 6em 4em;
+				padding: 1.5em 1.5em;
 				position: relative;
 				text-align: center;
 				width: 100%;
@@ -3198,7 +3198,7 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				padding: 2.25em 1.5em;
+				padding: 1.5em 1.5em;
 			}
 
 		/* Main */
@@ -3248,11 +3248,14 @@ input, select, textarea {
 				}
 
 		/* Footer */
+			#footer{
+				padding: 1.5em 1.5em;
+			}
 
 			#footer .copyright li {
 				border-left-width: 0;
 				display: block;
-				line-height: 2.25em;
+				line-height: 1.5em;
 				margin-left: 0;
 				padding-left: 0;
 			}
