@@ -3315,7 +3315,7 @@ input, select, textarea {
 }
 
 /* Media Queries */
-@media (max-width: 736px) {
+@media (max-width: 980px) {
 	/* Move connect-me section to header */
 	.header-connect {
 		display: block;
@@ -3326,7 +3326,7 @@ input, select, textarea {
 	}
 }
 
-@media (min-width: 737px) {
+@media (min-width: 981px) {
 	/* Keep connect-me section in the footer */
 	.header-connect {
 		display: none;
