@@ -3313,3 +3313,21 @@ input, select, textarea {
     justify-content: center;
     gap: 1em;
 }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+	/* Move connect-me section to header */
+	.connect-me {
+		margin-top: 2em;
+	}
+}
+
+@media (min-width: 1025px) {
+	/* Keep connect-me section in the footer */
+	#header .connect-me {
+		display: none;
+	}
+	#footer .connect-me {
+		display: block;
+	}
+}
