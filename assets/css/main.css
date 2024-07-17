@@ -3252,6 +3252,8 @@ input, select, textarea {
 .tab-separator {
     margin: 0 10px;
     color: #ccc;
+	display: flex;
+    align-items: center; /* Center align items vertically */
 }
 
 .tab-content {
@@ -3260,4 +3262,50 @@ input, select, textarea {
 
 .tab-content.active {
     display: block;
+}
+
+/* Adjust the styling of the Connect me section */
+.connect-me {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.connect-me h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #49bf9d;
+}
+
+/* Adjust the footer styling */
+#footer {
+    margin-top: 2em;
+}
+
+#footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
