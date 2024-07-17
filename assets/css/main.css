@@ -2997,6 +2997,13 @@ input, select, textarea {
 				font-size: 12pt;
 			}
 
+		/* Keep connect-me section in the footer */
+			.header-connect {
+				display: none;
+			}
+			.footer-connect {
+				display: block;
+			}
 	}
 
 /* Large */
@@ -3031,7 +3038,13 @@ input, select, textarea {
 				margin-left: 0;
 				padding-left: 0;
 			}
-
+		/* Keep connect-me section in the footer */
+			.header-connect {
+				display: none;
+			}
+			.footer-connect {
+				display: block;
+			}
 		/* Main */
 
 			#main {
@@ -3057,6 +3070,15 @@ input, select, textarea {
 
 			ul.icons li .icon {
 				font-size: 1.25em;
+			}
+
+		/* Hide connect-me in footer on smaller screens */
+			.header-connect {
+				display: block;
+				margin-top: 2em;
+			}
+			.footer-connect {
+				display: none;
 			}
 
 		/* Header */
@@ -3201,6 +3223,14 @@ input, select, textarea {
 					margin-top: -1em;
 				}
 
+			/* Hide connect-me in footer on smaller screens */
+			.header-connect {
+				display: block;
+				margin-top: 2em;
+			}
+			.footer-connect {
+				display: none;
+			}
 	}
 
 /* XSmall */
@@ -3225,6 +3255,15 @@ input, select, textarea {
 				line-height: 2.25em;
 				margin-left: 0;
 				padding-left: 0;
+			}
+
+			/* Hide connect-me in footer on smaller screens */
+			.header-connect {
+				display: block;
+				margin-top: 2em;
+			}
+			.footer-connect {
+				display: none;
 			}
 
 	}
@@ -3312,26 +3351,4 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     gap: 1em;
-}
-
-/* Media Queries */
-@media (max-width: 1024px) {
-	/* Move connect-me section to header */
-	.header-connect {
-		display: block;
-		margin-top: 2em;
-	}
-	.footer-connect {
-		display: none;
-	}
-}
-
-@media (min-width: 1025px) {
-	/* Keep connect-me section in the footer */
-	.header-connect {
-		display: none;
-	}
-	.footer-connect {
-		display: block;
-	}
 }
