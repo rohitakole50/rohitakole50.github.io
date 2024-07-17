@@ -3337,9 +3337,6 @@ input, select, textarea {
 }
 
 /* Adjust the footer styling */
-#footer {
-    margin-top: 2em;
-}
 
 #footer .social-links {
     display: flex;
