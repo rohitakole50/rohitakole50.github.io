@@ -2588,9 +2588,12 @@ input, select, textarea {
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
 		flex-direction: column;
-		-moz-align-items: -moz-flex-end;
-		-webkit-align-items: -webkit-flex-end;
-		-ms-align-items: -ms-flex-end;
+		/*-moz-align-items: -moz-flex-end;*/
+		/*-webkit-align-items: -webkit-flex-end;*/
+		/*-ms-align-items: -ms-flex-end;*/
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
 		align-items: flex-end;
 		-moz-justify-content: space-between;
 		-webkit-justify-content: space-between;
