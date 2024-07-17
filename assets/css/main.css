@@ -3315,14 +3315,17 @@ input, select, textarea {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
+@media (max-width: 980px) {
 	/* Move connect-me section to header */
 	.connect-me {
 		margin-top: 2em;
 	}
+	#footer .connect-me{
+		display: none;
+	}
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 	/* Keep connect-me section in the footer */
 	#header .connect-me {
 		display: none;
