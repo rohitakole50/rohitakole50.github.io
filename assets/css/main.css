@@ -3115,7 +3115,6 @@ input, select, textarea {
 				background-size: auto,							cover;
 				bottom: auto;
 				left: auto;
-				padding: 1.5em 1.5em;
 				position: relative;
 				text-align: center;
 				width: 100%;
@@ -3195,11 +3194,6 @@ input, select, textarea {
 					font-size: 1.35em;
 				}
 
-		/* Footer */
-
-			#footer {
-				padding: 1.5em 1.5em;
-			}
 
 		/* Main */
 
@@ -3248,9 +3242,6 @@ input, select, textarea {
 				}
 
 		/* Footer */
-			#footer{
-				padding: 1.5em 1.5em;
-			}
 
 			#footer .copyright li {
 				border-left-width: 0;
@@ -3354,4 +3345,25 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     gap: 1em;
+}
+
+@media screen and (max-width: 980px) {
+    /* Footer for medium screens */
+    #footer {
+        padding: 1.2em 0.8em; /* Adjusted padding */
+    }
+}
+
+@media screen and (max-width: 736px) {
+    /* Footer for small screens */
+    #footer {
+        padding: 1.2em 0.8em; /* Further adjusted padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Footer for extra small screens */
+    #footer {
+        padding: 1em 0.5em; /* Further adjusted padding */
+    }
 }
