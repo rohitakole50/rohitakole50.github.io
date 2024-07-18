@@ -169,6 +169,30 @@
 		});
 	});
 
+	document.addEventListener('DOMContentLoaded', function() {
+		const workItems = document.querySelectorAll('.work-item a');
+
+		workItems.forEach(item => {
+			item.addEventListener('click', function(event) {
+				const action = item.getAttribute('data-action');
+
+				if (action === 'popup') {
+					event.preventDefault();
+					// Code to open the popup
+					// For example, using a library like Magnific Popup
+					$.magnificPopup.open({
+						items: {
+							src: item.getAttribute('href')
+						},
+						type: 'image'
+					});
+				} else if (action === 'link') {
+					// Do nothing, let the default behavior happen
+				}
+			});
+		});
+	});
+
 
 
 })(jQuery);
