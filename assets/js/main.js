@@ -104,7 +104,7 @@
 				overlayOpacity: 0.85,
 				popupCloserText: '',
 				popupLoaderText: '',
-				selector: '.work-item a.image',
+				selector: '.work-item a.image[data-action="popup"]',
 				usePopupCaption: true,
 				usePopupDefaultStyling: false,
 				usePopupEasyClose: false,
@@ -113,6 +113,25 @@
 			});
 
 		});
+
+		// Handle work item links.
+		document.addEventListener('DOMContentLoaded', function() {
+			const workItems = document.querySelectorAll('.work-item a');
+
+			workItems.forEach(item => {
+				item.addEventListener('click', function(event) {
+					const action = item.getAttribute('data-action');
+
+					if (action === 'popup') {
+						event.preventDefault();
+						// Poptrox will handle the popup, so no need for additional code here
+					} else if (action === 'link') {
+						// Do nothing, let the default behavior happen
+					}
+				});
+			});
+		});
+
 	// Tab Functionality
 	window.openTab = function(event, tabName) {
 		console.log("Tab clicked: " + tabName);
@@ -168,31 +187,5 @@
 			alert('There was an error submitting your message. Please try again.');
 		});
 	});
-
-	document.addEventListener('DOMContentLoaded', function() {
-		const workItems = document.querySelectorAll('.work-item a');
-
-		workItems.forEach(item => {
-			item.addEventListener('click', function(event) {
-				const action = item.getAttribute('data-action');
-
-				if (action === 'popup') {
-					event.preventDefault();
-					// Code to open the popup
-					// For example, using a library like Magnific Popup
-					$.magnificPopup.open({
-						items: {
-							src: item.getAttribute('href')
-						},
-						type: 'image'
-					});
-				} else if (action === 'link') {
-					// Do nothing, let the default behavior happen
-				}
-			});
-		});
-	});
-
-
 
 })(jQuery);
