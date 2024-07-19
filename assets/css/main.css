@@ -3385,6 +3385,8 @@ input, select, textarea {
 			color: rgba(255, 255, 255, 0.4);
 		}
 
+
+/* Skills Section Styles */
 .skills-section {
     background: #f4f4f9;
     padding: 50px 0;
@@ -3398,17 +3400,17 @@ input, select, textarea {
 }
 
 .skills-section h3 {
-    margin-top: 20px;
     text-align: center;
+    margin-top: 20px;
     font-size: 1.5em;
     color: #787878;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(95px, 115px));
     gap: 20px;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -3420,13 +3422,9 @@ input, select, textarea {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    width: 150px; /* Set a fixed width */
-    height: 150px; /* Set a fixed height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-	overflow: hidden;
+    max-width: 100px;
+    max-height: 100px;
+    overflow: hidden;
 }
 
 .skill:hover {
@@ -3434,16 +3432,15 @@ input, select, textarea {
 }
 
 .skill img {
-    max-width: 100%; /* Ensure the image scales down to fit the container */
-    max-height: 100%; /* Ensure the image scales down to fit the container */
-    object-fit: contain; /* Ensures the image maintains aspect ratio */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .skill-icon {
     font-size: 2em;
     margin-bottom: 10px;
     color: #49bf9d;
-	object-fit: fill;
 }
 
 .skill h4 {
@@ -3452,12 +3449,115 @@ input, select, textarea {
     margin: 0;
 }
 
-/* Use existing color scheme */
-.skills-section h2,
-.skills-section h3,
-.skill h4 {
-    color: #787878;
+@media only screen and (min-width: 880px) {
+    .skill {
+        max-width: 115px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(95px, 115px));
+        grid-gap: 15px;
+    }
 }
+
+@media only screen and (min-width: 1280px) {
+    .skills-section h2 {
+        font-size: 2.5em;
+    }
+
+    .skills-section h3 {
+        font-size: 2em;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(95px, 115px));
+        grid-gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*.skills-section {*/
+/*    background: #f4f4f9;*/
+/*    padding: 50px 0;*/
+/*}*/
+
+/*.skills-section h2 {*/
+/*    text-align: center;*/
+/*    margin-bottom: 30px;*/
+/*    font-size: 2em;*/
+/*    color: #787878;*/
+/*}*/
+
+/*.skills-section h3 {*/
+/*    margin-top: 20px;*/
+/*    text-align: center;*/
+/*    font-size: 1.5em;*/
+/*    color: #787878;*/
+/*}*/
+
+/*.skills-grid {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));*/
+/*    gap: 20px;*/
+/*    justify-items: center;*/
+/*    align-items: center;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.skill {*/
+/*    background: #fff;*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 8px;*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*    transition: transform 0.3s ease;*/
+/*    width: 150px; !* Set a fixed width *!*/
+/*    height: 150px; !* Set a fixed height *!*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*	overflow: hidden;*/
+/*}*/
+
+/*.skill:hover {*/
+/*    transform: translateY(-10px);*/
+/*}*/
+
+/*.skill img {*/
+/*    max-width: 100%; !* Ensure the image scales down to fit the container *!*/
+/*    max-height: 100%; !* Ensure the image scales down to fit the container *!*/
+/*    object-fit: contain; !* Ensures the image maintains aspect ratio *!*/
+/*}*/
+
+/*.skill-icon {*/
+/*    font-size: 2em;*/
+/*    margin-bottom: 10px;*/
+/*    color: #49bf9d;*/
+/*	object-fit: fill;*/
+/*}*/
+
+/*.skill h4 {*/
+/*    font-size: 1.1em;*/
+/*    color: #787878;*/
+/*    margin: 0;*/
+/*}*/
+
+/*!* Use existing color scheme *!*/
+/*.skills-section h2,*/
+/*.skills-section h3,*/
+/*.skill h4 {*/
+/*    color: #787878;*/
+/*}*/
 
 /*.skills-section {*/
 /*    background-color: #f4f4f4;*/
