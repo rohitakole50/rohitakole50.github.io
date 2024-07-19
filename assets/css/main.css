@@ -3409,7 +3409,8 @@ input, select, textarea {
 .skill-category h3 {
     border-bottom: 2px solid #49bf9d;
     padding-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
+	margin-right: 10px;
 	margin-bottom: 20px;
     color: #787878;
 }
