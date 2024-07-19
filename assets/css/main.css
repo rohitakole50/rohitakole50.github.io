@@ -3388,6 +3388,35 @@ input, select, textarea {
 
 /* Skills Section Styles */
 
+.skillGroupTitle {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: min-content;
+    white-space: nowrap;
+}
+.skillGroupTitle::after {
+    background-color: #10ac84;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.skillGroup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(95px, 105px));
+    grid-gap: 8px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+}
+.skillGroup:not(:last-child) {
+    margin-bottom: 40px;
+}
+
 .box {
     display: flex;
     flex-direction: column;
@@ -3415,38 +3444,6 @@ input, select, textarea {
     padding: 50px 0;
 }
 
-.sectTitle {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #787878;
-}
-
-.skillGroupTitle {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.5em;
-    color: #787878;
-}
-
-.skillGroup {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.box.skillBox {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
 .box.skillBox:hover {
     transform: translateY(-10px);
 }
@@ -3462,6 +3459,12 @@ input, select, textarea {
     color: #787878;
     margin: 0;
 }
+
+.skillGroup {
+	grid-template-columns: repeat(auto-fit, minmax(95px, 115px));
+	grid-gap: 15px;
+}
+
 
 @media only screen and (min-width: 880px) {
     .skillGroup {
