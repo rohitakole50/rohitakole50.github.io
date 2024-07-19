@@ -2692,7 +2692,6 @@ input, select, textarea {
 			line-height: 1em;
 			margin-left: 0.75em;
 			padding-left: 0.75em;
-			padding-bottom: 0.75em;
 		}
 
 			#footer .copyright li:first-child {
@@ -3054,6 +3053,7 @@ input, select, textarea {
 				line-height: 2.25em;
 				margin-left: 0;
 				padding-left: 0;
+				padding-bottom: 10px;
 			}
 		/* Keep connect-me section in the footer */
 			.header-connect {
