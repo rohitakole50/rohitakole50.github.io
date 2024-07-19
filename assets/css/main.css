@@ -3420,16 +3420,23 @@ input, select, textarea {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    width: 150px; /* Set a fixed width */
-    height: 150px; /* Set a fixed height */
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	overflow: hidden;
 }
 
 .skill:hover {
     transform: translateY(-10px);
+}
+
+.skill img {
+    max-width: 100%; /* Ensure the image scales down to fit the container */
+    max-height: 100%; /* Ensure the image scales down to fit the container */
+    object-fit: contain; /* Ensures the image maintains aspect ratio */
 }
 
 .skill-icon {
