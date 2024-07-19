@@ -3431,7 +3431,7 @@ input, select, textarea {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(95px, 115px));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -3493,10 +3493,11 @@ input, select, textarea {
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(95px, 115px));
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         grid-gap: 20px;
     }
 }
+
 
 
 
