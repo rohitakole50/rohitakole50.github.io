@@ -3417,6 +3417,7 @@ input, select, textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+	gap: 20px;
 }
 
 .skill {
@@ -3424,6 +3425,8 @@ input, select, textarea {
     flex-direction: column;
     align-items: center;
     margin: 10px;
+	width: 100px;
+	height: 100px;
 }
 
 .skill img {
