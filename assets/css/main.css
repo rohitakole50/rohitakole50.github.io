@@ -3385,3 +3385,54 @@ input, select, textarea {
 			color: rgba(255, 255, 255, 0.4);
 		}
 
+/* Skills Section */
+
+#skills {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/*h2 {*/
+/*    text-align: center;*/
+/*    margin-bottom: 20px;*/
+/*    color: #2c3e50;*/
+/*}*/
+
+.skill-category {
+    margin-bottom: 40px;
+}
+
+.skill-category h3 {
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill span {
+    font-size: 14px;
+    color: #555;
+}
