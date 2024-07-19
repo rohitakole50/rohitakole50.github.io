@@ -3436,6 +3436,7 @@ input, select, textarea {
     font-size: 2em;
     margin-bottom: 10px;
     color: #49bf9d;
+	object-fit: fill;
 }
 
 .skill h4 {
