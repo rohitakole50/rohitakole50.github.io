@@ -3385,207 +3385,79 @@ input, select, textarea {
 			color: rgba(255, 255, 255, 0.4);
 		}
 
-
-/* Skills Section Styles */
-
-.skillGroupTitle {
-    position: relative;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    width: min-content;
-    white-space: nowrap;
-}
-.skillGroupTitle::after {
-    background-color: #10ac84;
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 5px;
-}
-
-.skillGroup {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(95px, 105px));
-    grid-gap: 8px;
-    margin: 0 auto;
-    width: 100%;
-    justify-content: center;
-}
-.skillGroup:not(:last-child) {
-    margin-bottom: 40px;
-}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    border: 1px solid #10ac84;
-    box-shadow: 0px 0px 5px #8a9096;
-    background: #ffffff;
-}
-
-.skillBox {
-    padding: 5px;
-    width: 100%;
-}
-.skillBox img {
-    width: 65%;
-    height: auto;
-}
-.skillBox p {
-    font-size: 1.6rem;
-}
-
 .skills-section {
     background: #f4f4f9;
     padding: 50px 0;
 }
 
-.box.skillBox {
+.skills-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #787878;
+}
+
+.skills-section h3 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #787878;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skill {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    width: 100%;
-    height: 0;
-    padding-bottom: 100%; /* Makes the div a square */
-    position: relative; /* For positioning the content absolutely */
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
 }
 
-.box.skillBox:hover {
+.skill:hover {
     transform: translateY(-10px);
 }
 
-.box.skillBox svg {
-    width: 67px;
-    height: 67px;
-    margin-bottom: 10px;
+.skill img {
+    max-width: 100%; /* Ensure the image scales down to fit the container */
+    max-height: 100%; /* Ensure the image scales down to fit the container */
+    object-fit: contain; /* Ensures the image maintains aspect ratio */
 }
 
-.box.skillBox p {
+.skill-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #49bf9d;
+	object-fit: fill;
+}
+
+.skill h4 {
     font-size: 1.1em;
     color: #787878;
     margin: 0;
 }
 
-.skillGroup {
-	grid-template-columns: repeat(auto-fit, minmax(95px, 115px));
-	grid-gap: 15px;
+/* Use existing color scheme */
+.skills-section h2,
+.skills-section h3,
+.skill h4 {
+    color: #787878;
 }
-
-
-@media only screen and (min-width: 880px) {
-    .skillGroup {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 20px;
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .sectTitle {
-        font-size: 2.5em;
-    }
-
-    .skillGroupTitle {
-        font-size: 2em;
-    }
-
-    .skillGroup {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.skills-section {*/
-/*    background: #f4f4f9;*/
-/*    padding: 50px 0;*/
-/*}*/
-
-/*.skills-section h2 {*/
-/*    text-align: center;*/
-/*    margin-bottom: 30px;*/
-/*    font-size: 2em;*/
-/*    color: #787878;*/
-/*}*/
-
-/*.skills-section h3 {*/
-/*    margin-top: 20px;*/
-/*    text-align: center;*/
-/*    font-size: 1.5em;*/
-/*    color: #787878;*/
-/*}*/
-
-/*.skills-grid {*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));*/
-/*    gap: 20px;*/
-/*    justify-items: center;*/
-/*    align-items: center;*/
-/*    margin-bottom: 20px;*/
-/*}*/
-
-/*.skill {*/
-/*    background: #fff;*/
-/*    border: 1px solid #ddd;*/
-/*    border-radius: 8px;*/
-/*    padding: 20px;*/
-/*    text-align: center;*/
-/*    transition: transform 0.3s ease;*/
-/*    width: 150px; !* Set a fixed width *!*/
-/*    height: 150px; !* Set a fixed height *!*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*	overflow: hidden;*/
-/*}*/
-
-/*.skill:hover {*/
-/*    transform: translateY(-10px);*/
-/*}*/
-
-/*.skill img {*/
-/*    max-width: 100%; !* Ensure the image scales down to fit the container *!*/
-/*    max-height: 100%; !* Ensure the image scales down to fit the container *!*/
-/*    object-fit: contain; !* Ensures the image maintains aspect ratio *!*/
-/*}*/
-
-/*.skill-icon {*/
-/*    font-size: 2em;*/
-/*    margin-bottom: 10px;*/
-/*    color: #49bf9d;*/
-/*	object-fit: fill;*/
-/*}*/
-
-/*.skill h4 {*/
-/*    font-size: 1.1em;*/
-/*    color: #787878;*/
-/*    margin: 0;*/
-/*}*/
-
-/*!* Use existing color scheme *!*/
-/*.skills-section h2,*/
-/*.skills-section h3,*/
-/*.skill h4 {*/
-/*    color: #787878;*/
-/*}*/
 
 /*.skills-section {*/
 /*    background-color: #f4f4f4;*/
