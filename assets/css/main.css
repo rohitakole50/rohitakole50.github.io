@@ -3387,6 +3387,29 @@ input, select, textarea {
 
 
 /* Skills Section Styles */
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #10ac84;
+    box-shadow: 0px 0px 5px #8a9096;
+    background: #ffffff;
+}
+
+.skillBox {
+    padding: 5px;
+    width: 100%;
+}
+.skillBox img {
+    width: 65%;
+    height: auto;
+}
+.skillBox p {
+    font-size: 1.6rem;
+}
+
 .skills-section {
     background: #f4f4f9;
     padding: 50px 0;
