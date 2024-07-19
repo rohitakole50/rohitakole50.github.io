@@ -188,4 +188,32 @@
 		});
 	});
 
+	document.addEventListener("DOMContentLoaded", function() {
+		const skillsSection = document.getElementById('skills');
+		const skillLevels = document.querySelectorAll('.skill-level');
+
+		function isElementInViewport(el) {
+			const rect = el.getBoundingClientRect();
+			return (
+				rect.top >= 0 &&
+				rect.left >= 0 &&
+				rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+				rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+			);
+		}
+
+		function animateSkills() {
+			if (isElementInViewport(skillsSection)) {
+				skillLevels.forEach(skillLevel => {
+					const width = skillLevel.getAttribute('style').split(':')[1].trim();
+					skillLevel.style.width = width;
+				});
+			}
+		}
+
+		window.addEventListener('scroll', animateSkills);
+		animateSkills(); // Run on page load in case skills are already in view
+	});
+
+
 })(jQuery);
