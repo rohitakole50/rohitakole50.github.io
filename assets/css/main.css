@@ -2652,6 +2652,10 @@ input, select, textarea {
 			color: #ffffff;
 		}
 
+		#header strong:hover {
+			color: #49bf9d;
+		}
+
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
 			color: #ffffff;
 		}
