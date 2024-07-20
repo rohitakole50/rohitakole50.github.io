@@ -109,13 +109,7 @@ input, select, textarea {
 		line-height: 1.75em;
 	}
 
-	.big-font {
-		font-size: 20pt;
-	}
 
-	.small-font {
-		font-size: 12pt;
-	}
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
