@@ -33,6 +33,11 @@ body {
 	line-height: 1;
 }
 
+body {
+	display: flex;
+	flex-direction: row;
+}
+
 .justified-text {
     text-align: justify;
 }
@@ -2720,7 +2725,7 @@ input, select, textarea {
 		margin-left: 35%;
 		max-width: 54em;
 		padding: 8em 4em 4em 4em;
-		width: calc(100% - 35%);
+		width: 100%;
 	}
 
 		#main > section {
@@ -2734,6 +2739,17 @@ input, select, textarea {
 				margin-top: 0;
 				padding-top: 0;
 			}
+
+	#main-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 35%;
+		width: 65%;
+		padding: 8em 4em 4em 4em;
+		box-sizing: border-box;
+	}
+
 
 /* Poptrox */
 
@@ -3030,6 +3046,12 @@ input, select, textarea {
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
+		#main-container {
+			margin-left: 30%;
+			width: 70%;
+			padding: 6em 3em 3em 3em;
+		}
+}
 
 		/* Keep connect-me section in the footer */
 			.header-connect {
