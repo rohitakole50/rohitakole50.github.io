@@ -2474,6 +2474,11 @@ input, select, textarea {
 			color: #49bf9d !important;
 		}
 
+
+		.button:hover strong {
+			color: #49bf9d !important;
+		}
+
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
@@ -2650,10 +2655,6 @@ input, select, textarea {
 
 		#header strong, #header b {
 			color: #ffffff;
-		}
-
-		#header strong:hover {
-			color: #49bf9d;
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
