@@ -3413,6 +3413,13 @@ input, select, textarea {
 
 /* Skills Section */
 
+/* Centering the skills section */
+.right-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #skills {
     max-width: 900px;
     margin: 50px auto;
