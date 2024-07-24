@@ -133,16 +133,18 @@
 		});
 
 	// Tab Functionality
-	window.openTab = function(event, tabName) {
+	window.openTab = function(event, tabName, categoryId) {
 		console.log("Tab clicked: " + tabName);
-		// Hide all tab contents
-		const tabContents = document.querySelectorAll('.tab-content');
+		// Get the tab contents and tab links within the specified category
+		const tabContents = document.querySelectorAll(`#${categoryId} .tab-content`);
+		const tabLinks = document.querySelectorAll(`#${categoryId} .tab-link`);
+
+		// Hide all tab contents within the category
 		tabContents.forEach(content => {
 			content.classList.remove('active');
 		});
 
-		// Remove active class from all tab links
-		const tabLinks = document.querySelectorAll('.tab-link');
+		// Remove active class from all tab links within the category
 		tabLinks.forEach(link => {
 			link.classList.remove('active');
 		});
@@ -154,7 +156,12 @@
 
 	// Set default tab to be open
 	document.addEventListener("DOMContentLoaded", function() {
-		document.getElementById("dataAnalytics").classList.add("active");
+		document.querySelectorAll('.tab-content.default-active').forEach(content => {
+			content.classList.add("active");
+		});
+		document.querySelectorAll('.tab-link.default-active').forEach(link => {
+			link.classList.add("active");
+		});
 	});
 
 	// Contact Form Submission
