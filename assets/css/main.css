@@ -3483,6 +3483,7 @@ input, select, textarea {
   cursor: pointer;
 }
 .tabs .content > section {
-  display: none;
-  padding: 20px 25px;
-  border-top
+	display: none;
+	padding: 20px 25px;
+	border-top: 1px solid #ddd;
+}
