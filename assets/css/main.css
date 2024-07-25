@@ -300,12 +300,6 @@ input, select, textarea {
 
 		}
 
-		@media (min-width: 1024px) {
-			.work-item .image {
-				height: 300px; /* Adjusted height for even larger screens */
-			}
-		}
-
 /* Row */
 
 	.row {
