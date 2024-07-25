@@ -3037,10 +3037,6 @@ input, select, textarea {
 			font-size: 12pt;
 		}
 
-		.work-item .image {
-			height: 200px !important;
-		}
-
 		/* Keep connect-me section in the footer */
 		.header-connect {
 			display: none;
