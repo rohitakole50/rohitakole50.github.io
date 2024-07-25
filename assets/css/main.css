@@ -302,7 +302,7 @@ input, select, textarea {
 
 		@media (min-width: 1024px) {
 			.work-item .image {
-				height: 200px; /* Adjusted height for even larger screens */
+				height: 300px; /* Adjusted height for even larger screens */
 			}
 		}
 
