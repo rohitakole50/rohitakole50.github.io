@@ -3669,16 +3669,16 @@ input, select, textarea {
 
 		#navbar ul li {
 			display: inline-block; /* Keep list items horizontal */
-			margin: 0 10px; /* Adjust margin for spacing */
+			margin: 0 5px; /* Adjust margin for spacing */
 		}
 
 		#navbar ul li a {
 			display: inline-block;
 			color: white;
 			text-align: center;
-			padding: 10px 5px; /* Adjust padding as needed */
+			padding: 5px 5px; /* Adjust padding as needed */
 			text-decoration: none;
-			font-size: 17px;
+			font-size: 14px;
 			border-bottom: none;
 		}
 
