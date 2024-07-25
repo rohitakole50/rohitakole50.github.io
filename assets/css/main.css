@@ -153,10 +153,6 @@ input, select, textarea {
 		}
 
 	h1 {
-		margin-bottom: 0.1em;
-	}
-
-	h1 {
 		font-size: 2em;
 		line-height: 1.5em;
 	}
@@ -164,6 +160,10 @@ input, select, textarea {
 	h2 {
 		font-size: 1.5em;
 		line-height: 1.5em;
+	}
+
+	h2 {
+		margin-bottom: 0.1em;
 	}
 
 	h3 {
