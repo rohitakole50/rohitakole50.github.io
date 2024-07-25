@@ -3315,16 +3315,19 @@ input, select, textarea {
     cursor: pointer;
     color: #333;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, border 0.3s;
+	border-bottom: none;
 }
 
 .tab-link.active {
 	color: #316ff6;
     font-weight: bold;
+	border-bottom: none;
 }
 
 .tab-link:hover {
 	color: #316ff6;
+	border-bottom: none;
 }
 
 .tab-separator {
