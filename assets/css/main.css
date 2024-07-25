@@ -3132,10 +3132,6 @@ input, select, textarea {
 			align-items: center; /* Centers the links */
 		}
 
-		#navbar li {
-			width: 100%; /* Ensures the links take full width */
-		}
-
 		#navbar li a {
 			text-align: center; /* Centers the text */
 			padding: 10px 0; /* Adjust padding as needed */
@@ -3259,10 +3255,6 @@ input, select, textarea {
 			align-items: center;
 		}
 
-		#navbar li {
-			width: 100%;
-		}
-
 		#navbar li a {
 			text-align: center;
 			padding: 10px 0;
@@ -3336,10 +3328,6 @@ input, select, textarea {
 
 		#navbar ul {
 			align-items: center;
-		}
-
-		#navbar li {
-			width: 100%;
 		}
 
 		#navbar li a {
