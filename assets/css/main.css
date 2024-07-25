@@ -3101,88 +3101,100 @@ input, select, textarea {
 	@media screen and (max-width: 980px) {
 
 		/* Basic */
-
-			h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
-				display: none;
-			}
+		h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+			display: none;
+		}
 
 		/* List */
-
-			ul.icons li .icon {
-				font-size: 1.25em;
-			}
+		ul.icons li .icon {
+			font-size: 1.25em;
+		}
 
 		/* Hide connect-me in footer on smaller screens */
-			.header-connect {
-				display: block;
-				margin-top: 2em;
-			}
-			.footer-connect {
-				display: none;
-			}
+		.header-connect {
+			display: block;
+			margin-top: 2em;
+		}
+		.footer-connect {
+			display: none;
+		}
+
+		#navbar ul {
+			flex-direction: column; /* Stacks the links vertically */
+			align-items: center; /* Centers the links */
+		}
+
+		#navbar li {
+			width: 100%; /* Ensures the links take full width */
+		}
+
+		#navbar li a {
+			text-align: center; /* Centers the text */
+			padding: 10px 0; /* Adjust padding as needed */
+		}
 
 		/* Header */
 
-			#header {
-				background-attachment: scroll;
-				background-position: top left, center center;
-				background-size: auto,		cover;
-				left: auto;
-				padding: 6em 4em;
-				position: relative;
-				text-align: center;
-				top: auto;
-				width: 100%;
-				display: block;
+		#header {
+			background-attachment: scroll;
+			background-position: top left, center center;
+			background-size: auto,		cover;
+			left: auto;
+			padding: 6em 4em;
+			position: relative;
+			text-align: center;
+			top: auto;
+			width: 100%;
+			display: block;
+		}
+
+			#header h1 {
+				font-size: 1.75em;
 			}
 
-				#header h1 {
-					font-size: 1.75em;
+				#header h1 br {
+					display: inline;
 				}
-
-					#header h1 br {
-						display: inline;
-					}
 
 		/* Footer */
 
-			#footer {
-				background-attachment: scroll;
-				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-				background-position: top left,						bottom center;
-				background-repeat: repeat,							no-repeat;
-				background-size: auto,							cover;
-				bottom: auto;
-				left: auto;
-				position: relative;
-				text-align: center;
-				width: 100%;
+		#footer {
+			background-attachment: scroll;
+			background-color: #1f1815;
+			background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+			background-position: top left,						bottom center;
+			background-repeat: repeat,							no-repeat;
+			background-size: auto,							cover;
+			bottom: auto;
+			left: auto;
+			position: relative;
+			text-align: center;
+			width: 100%;
+		}
+
+			#footer .icons {
+				margin: 0 0 1em 0;
 			}
 
-				#footer .icons {
-					margin: 0 0 1em 0;
-				}
+			#footer .copyright {
+				margin: 0 0 1em 0;
+			}
 
-				#footer .copyright {
-					margin: 0 0 1em 0;
+				#footer .copyright li {
+					border-left-width: 1px;
+					display: inline-block;
+					line-height: 1em;
+					margin-left: 0.75em;
+					padding-left: 0.75em;
 				}
-
-					#footer .copyright li {
-						border-left-width: 1px;
-						display: inline-block;
-						line-height: 1em;
-						margin-left: 0.75em;
-						padding-left: 0.75em;
-					}
 
 		/* Main */
 
-			#main {
-				margin: 0;
-				padding: 6em 4em;
-				width: 100%;
-			}
+		#main {
+			margin: 0;
+			padding: 6em 4em;
+			width: 100%;
+		}
 
 	}
 
@@ -3191,80 +3203,87 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		/* Basic */
+		h1 {
+			font-size: 1.5em;
+		}
 
-			h1 {
-				font-size: 1.5em;
-			}
+		h2 {
+			font-size: 1.2em;
+		}
 
-			h2 {
-				font-size: 1.2em;
-			}
-
-			h3 {
-				font-size: 1em;
-			}
+		h3 {
+			font-size: 1em;
+		}
 
 		/* Section/Article */
+		section.special, article.special {
+			text-align: center;
+		}
 
-			section.special, article.special {
-				text-align: center;
+		header.major h2 {
+			font-size: 1.35em;
+		}
+
+		/* List */
+		ul.labeled-icons li {
+			padding-left: 2em;
+		}
+
+			ul.labeled-icons li h3 {
+				line-height: 1.75em;
 			}
 
-			header.major h2 {
+		/* Header */
+		#header {
+			padding: 2.25em 1.5em;
+		}
+
+			#header h1 {
 				font-size: 1.35em;
 			}
 
-		/* List */
+		#navbar ul {
+			flex-direction: column;
+			align-items: center;
+		}
 
-			ul.labeled-icons li {
-				padding-left: 2em;
-			}
+		#navbar li {
+			width: 100%;
+		}
 
-				ul.labeled-icons li h3 {
-					line-height: 1.75em;
-				}
-
-		/* Header */
-
-			#header {
-				padding: 2.25em 1.5em;
-			}
-
-				#header h1 {
-					font-size: 1.35em;
-				}
-
+		#navbar li a {
+			text-align: center;
+			padding: 10px 0;
+		}
 
 		/* Main */
+		#main {
+			padding: 2.25em 1.5em 0.25em 1.5em;
+		}
 
-			#main {
-				padding: 2.25em 1.5em 0.25em 1.5em;
+			#main > section {
+				margin: 2.25em 0 0 0;
+				padding: 2.25em 0 0 0;
 			}
-
-				#main > section {
-					margin: 2.25em 0 0 0;
-					padding: 2.25em 0 0 0;
-				}
 
 		/* Poptrox */
+		.poptrox-popup {
+			border-radius: 0;
+		}
 
-			.poptrox-popup {
-				border-radius: 0;
+			.poptrox-popup .nav-next:before,
+			.poptrox-popup .nav-previous:before {
+				margin-top: -1em;
 			}
 
-				.poptrox-popup .nav-next:before,
-				.poptrox-popup .nav-previous:before {
-					margin-top: -1em;
-				}
-
-			/* Hide connect-me in footer on smaller screens */
-			.header-connect {
-				display: block;
-				margin-top: 2em;
-			}
-			.footer-connect {
-				display: none;
-			}
+		/* Hide connect-me in footer on smaller screens */
+		.header-connect {
+			display: block;
+			margin-top: 2em;
+		}
+		.footer-connect {
+			display: none;
+		}
 	}
 
 /* XSmall */
@@ -3272,33 +3291,45 @@ input, select, textarea {
 	@media screen and (max-width: 480px) {
 
 		/* Header */
+		#header {
+			padding: 4.5em 1.5em;
+		}
 
-			#header {
-				padding: 4.5em 1.5em;
-			}
-
-				#header h1 br {
-					display: none;
-				}
-
-		/* Footer */
-
-			#footer .copyright li {
-				border-left-width: 0;
-				display: block;
-				line-height: 1.5em;
-				margin-left: 0;
-				padding-left: 0;
-			}
-
-			/* Hide connect-me in footer on smaller screens */
-			.header-connect {
-				display: block;
-				margin-top: 2em;
-			}
-			.footer-connect {
+			#header h1 br {
 				display: none;
 			}
+
+		/* Footer */
+		#footer .copyright li {
+			border-left-width: 0;
+			display: block;
+			line-height: 1.5em;
+			margin-left: 0;
+			padding-left: 0;
+		}
+
+		/* Hide connect-me in footer on smaller screens */
+		.header-connect {
+			display: block;
+			margin-top: 2em;
+		}
+		.footer-connect {
+			display: none;
+		}
+
+		#navbar ul {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#navbar li {
+			width: 100%;
+		}
+
+		#navbar li a {
+			text-align: center;
+			padding: 10px 0;
+		}
 
 	}
 
