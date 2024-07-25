@@ -3333,6 +3333,11 @@ input, select, textarea {
     align-items: center; /* Center align items vertically */
 }
 
+.tab-separator-border {
+    border-bottom: 1px solid #316ff6; /* Adjust the border style and color as needed */
+    margin: 10px 0; /* Adjust the margin as needed */
+}
+
 .tab-content {
     display: none;
 }
