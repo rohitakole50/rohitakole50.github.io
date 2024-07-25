@@ -3054,7 +3054,7 @@ input, select, textarea {
 
 			#header {
 				padding: 6em 3em 3em 3em;
-				width: 30%;
+				width: 35%;
 			}
 
 				#header h1 {
@@ -3120,7 +3120,6 @@ input, select, textarea {
 		}
 
 		#navbar ul {
-			flex-direction: column; /* Stacks the links vertically */
 			align-items: center; /* Centers the links */
 		}
 
@@ -3243,7 +3242,6 @@ input, select, textarea {
 			}
 
 		#navbar ul {
-			flex-direction: column;
 			align-items: center;
 		}
 
@@ -3318,7 +3316,6 @@ input, select, textarea {
 		}
 
 		#navbar ul {
-			flex-direction: column;
 			align-items: center;
 		}
 
@@ -3504,39 +3501,42 @@ input, select, textarea {
     color: #555;
 }
 
-/* Style for the navigation bar */
+/* Navigation Bar */
 #navbar {
-    position: sticky;
-    top: 0;
-    width: calc(100% - 35%); /* Adjust the width to match the header */
-    margin-left: 35%; /* Align with the header */
     background-color: #333;
-    z-index: 999; /* Ensure it stays on top of other elements */
+    overflow: hidden;
+    position: fixed; /* Make it stick to the top */
+    top: 0;
+    width: calc(100% - 35%); /* Ensure it covers the right side of the page */
+    left: 35%;
+    z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 #navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    text-align: center; /* Center the navigation links */
 }
 
 #navbar ul li {
-    float: left;
+    display: inline; /* Display list items horizontally */
+    margin-right: 15px; /* Space between the links */
 }
 
 #navbar ul li a {
-    display: block;
+    display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
 	border-bottom: none;
 }
 
 #navbar ul li a:hover {
-    background-color: #111;
+    background-color: #ddd;
+    color: black;
 }
 
 /* Add some padding to sections to avoid content being hidden behind the navbar */
