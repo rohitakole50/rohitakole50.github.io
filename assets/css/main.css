@@ -3306,7 +3306,8 @@ input, select, textarea {
 .tab-container {
     display: flex;
     justify-content: left;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Remove bottom margin to reduce space */
+    border-bottom: none; /* Remove dotted line */
 }
 
 .tab-link {
@@ -3335,7 +3336,7 @@ input, select, textarea {
 
 .tab-separator-border {
     border-bottom: 1px solid #316ff6; /* Adjust the border style and color as needed */
-    margin: 10px 0; /* Adjust the margin as needed */
+    margin: 5px 0; /* Adjust the margin as needed */
 }
 
 .tab-content {
