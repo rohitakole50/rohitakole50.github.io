@@ -3033,17 +3033,21 @@ input, select, textarea {
 
 		/* Basic */
 
-			body, input, select, textarea {
-				font-size: 12pt;
-			}
+		body, input, select, textarea {
+			font-size: 12pt;
+		}
+
+		.work-item .image {
+			height: 200px !important;
+		}
 
 		/* Keep connect-me section in the footer */
-			.header-connect {
-				display: none;
-			}
-			.footer-connect {
-				display: block;
-			}
+		.header-connect {
+			display: none;
+		}
+		.footer-connect {
+			display: block;
+		}
 	}
 
 /* Large */
