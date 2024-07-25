@@ -3305,7 +3305,7 @@ input, select, textarea {
 /* Tabs Container */
 .tab-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-bottom: 20px;
 }
 
