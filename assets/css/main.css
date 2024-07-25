@@ -2582,7 +2582,8 @@ input, select, textarea {
 	}
 
 		.work-item .image {
-			position: relative;
+			margin: 0 0 1em 0;
+			display: block;
 			width: 100%;
 			padding-top: 56.25%; /* Aspect ratio of 16:9 */
 			overflow: hidden;
