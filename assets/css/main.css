@@ -2591,7 +2591,7 @@ input, select, textarea {
 		.work-item .image img {
 			width: 100%;
 			height: auto;
-			object-fit: fill; /* Stretch the image to fill the container */
+			object-fit: cover; /* Stretch the image to fill the container */
 			border-radius: 0.35em;
 		}
 
