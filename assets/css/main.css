@@ -3130,12 +3130,16 @@ input, select, textarea {
 		}
 
 		#navbar ul {
-			align-items: center; /* Centers the links */
+			justify-content: space-around; /* Distribute space around links */
 		}
 
-		#navbar li a {
-			text-align: center; /* Centers the text */
-			padding: 10px 0; /* Adjust padding as needed */
+		#navbar ul li {
+			display: inline-block; /* Keep list items horizontal */
+			margin: 0 10px; /* Adjust margin for spacing */
+		}
+
+		#navbar ul li a {
+			padding: 10px 5px; /* Adjust padding as needed */
 		}
 
 		/* Header */
@@ -3253,12 +3257,16 @@ input, select, textarea {
 		}
 
 		#navbar ul {
-			align-items: center;
+			justify-content: space-around; /* Distribute space around links */
 		}
 
-		#navbar li a {
-			text-align: center;
-			padding: 10px 0;
+		#navbar ul li {
+			display: inline-block; /* Keep list items horizontal */
+			margin: 0 10px; /* Adjust margin for spacing */
+		}
+
+		#navbar ul li a {
+			padding: 10px 5px; /* Adjust padding as needed */
 		}
 
 		/* Main */
@@ -3328,12 +3336,16 @@ input, select, textarea {
 		}
 
 		#navbar ul {
-			align-items: center;
+			justify-content: space-around; /* Distribute space around links */
 		}
 
-		#navbar li a {
-			text-align: center;
-			padding: 10px 0;
+		#navbar ul li {
+			display: inline-block; /* Keep list items horizontal */
+			margin: 0 10px; /* Adjust margin for spacing */
+		}
+
+		#navbar ul li a {
+			padding: 10px 5px; /* Adjust padding as needed */
 		}
 
 	}
