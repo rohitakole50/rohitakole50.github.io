@@ -2581,72 +2581,19 @@ input, select, textarea {
 		/*padding-bottom: 2em;*/
 	}
 
-		/* Image container for consistent aspect ratio */
 		.work-item .image {
 			margin: 0 0 1em 0;
 			display: block;
 			width: 100%;
-			padding-top: 56.25%; /* Aspect ratio of 16:9 */
-			position: relative;
+			height: 144px;
 			overflow: hidden;
-			border-radius: 0.35em;
 		}
 
 		.work-item .image img {
-			position: absolute;
-			top: 0;
-			left: 0;
 			width: 100%;
 			height: 100%;
-			object-fit: cover; /* Cover the container while maintaining aspect ratio */
+			object-fit: fill; /* Stretch the image to fill the container */
 			border-radius: 0.35em;
-			transition: opacity 0.3s ease; /* Smooth transition for hover effect */
-		}
-
-		/* Overlay Effect */
-		.work-item .image:before {
-			transition: opacity 0.3s ease-in-out;
-			background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-			border-radius: 0.35em;
-			content: '';
-			display: block;
-			height: 100%;
-			left: 0;
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-
-		.work-item .image.thumb:hover:before {
-			opacity: 1.0;
-		}
-
-		/* View Text Overlay */
-		.work-item .image.thumb:after {
-			transition: opacity 0.3s ease-in-out;
-			border-radius: 0.35em;
-			border: solid 3px rgba(255, 255, 255, 0.5);
-			color: #fff;
-			content: 'View';
-			display: inline-block;
-			font-size: 0.8em;
-			font-weight: 400;
-			left: 50%;
-			line-height: 2.25em;
-			margin: -1.25em 0 0 -3em;
-			opacity: 0;
-			padding: 0 1.5em;
-			position: absolute;
-			text-align: center;
-			text-decoration: none;
-			top: 50%;
-			white-space: nowrap;
-			transform: translate(-50%, -50%);
-		}
-
-		.work-item .image.thumb:hover:after {
-			opacity: 1.0;
 		}
 
 		.work-item h3 {
