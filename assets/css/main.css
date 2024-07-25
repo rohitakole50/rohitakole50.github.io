@@ -2585,6 +2585,7 @@ input, select, textarea {
 			margin: 0 0 1em 0;
 			display: block;
 			width: 100%;
+			padding: 56.25%;
 			height: 144px;
 			overflow: hidden;
 		}
