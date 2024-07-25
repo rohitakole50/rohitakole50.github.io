@@ -3460,6 +3460,10 @@ input, select, textarea {
 	border-top: solid 2px #efefef;
 }
 
+#skills h2 {
+	padding: 1em;
+}
+
 .skill-category {
     margin-bottom: 10px;
 }
