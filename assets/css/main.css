@@ -3469,16 +3469,17 @@ input, select, textarea {
     color: #555;
 }
 
-/* Style the navigation bar */
-nav {
-    background-color: #333;
+/* Style for the navigation bar */
+#navbar {
     position: sticky;
     top: 0;
-    width: 100%;
-    z-index: 1000;
+    width: calc(100% - 30%); /* Adjust the width to match the header */
+    margin-left: 30%; /* Align with the header */
+    background-color: #333;
+    z-index: 999; /* Ensure it stays on top of other elements */
 }
 
-nav ul {
+#navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -3486,11 +3487,11 @@ nav ul {
     background-color: #333;
 }
 
-nav ul li {
+#navbar ul li {
     float: left;
 }
 
-nav ul li a {
+#navbar ul li a {
     display: block;
     color: white;
     text-align: center;
@@ -3498,7 +3499,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a:hover {
+#navbar ul li a:hover {
     background-color: #111;
 }
 
