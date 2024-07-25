@@ -3307,7 +3307,7 @@ input, select, textarea {
     display: flex;
     justify-content: left;
     margin-bottom: 0; /* Remove bottom margin to reduce space */
-    border-bottom: none; /* Remove dotted line */
+    border-bottom: none !important; /* Remove dotted line */
 }
 
 .tab-link {
