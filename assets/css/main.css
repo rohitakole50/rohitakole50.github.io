@@ -3339,7 +3339,7 @@ input, select, textarea {
 
 .tab-separator-border {
     border-bottom: 1px solid #316ff6; /* Adjust the border style and color as needed */
-    margin: 5px 0; /* Adjust the margin as needed */
+    /*margin: 0 0; !* Adjust the margin as needed *!*/
 }
 
 .tab-content {
