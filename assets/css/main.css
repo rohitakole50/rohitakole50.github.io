@@ -2582,16 +2582,19 @@ input, select, textarea {
 	}
 
 		.work-item .image {
-			margin: 0 0 1em 0;
-			display: block;
+			position: relative;
 			width: 100%;
+			padding-top: 56.25%; /* Aspect ratio of 16:9 */
 			overflow: hidden;
 		}
 
 		.work-item .image img {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-			height: auto;
-			object-fit: cover; /* Stretch the image to fill the container */
+			height: 100%;
+			object-fit: cover; /* Maintain aspect ratio and cover the container */
 			border-radius: 0.35em;
 		}
 
