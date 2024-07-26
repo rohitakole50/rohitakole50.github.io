@@ -2581,7 +2581,7 @@ input, select, textarea {
 /* Work Item */
 
 	.work-item {
-		margin: 0.5em 0 1em 0;
+		margin: 1em 0 0 0;
 		position: relative;
 		/*padding-bottom: 2em;*/
 	}
@@ -2737,7 +2737,7 @@ input, select, textarea {
 		#main > section {
 			border-top: solid 2px #efefef;
 			margin: 4em 0 0 0;
-			padding: 4em 0 0 0;
+			padding: 2em 0 0 0;
 		}
 
 			#main > section:first-child {
@@ -3298,33 +3298,36 @@ input, select, textarea {
 /* Tabs Container */
 .tab-container {
     display: flex;
-    justify-content: left;
-    margin-bottom: 0; /* Remove bottom margin to reduce space */
-    border-bottom: none !important; /* Remove dotted line */
+    justify-content: space-evenly;
+	background-color: #eeeeee;
+	padding: 0; /* Remove any padding */
 }
 
 .tab-link {
-    padding: 10px 20px;
+    padding: 1px 20px;
     cursor: pointer;
     color: #333;
     text-decoration: none;
-    transition: color 0.3s, border 0.3s;
-	border-bottom: none;
+	border: 2px solid transparent; /* Add border for inactive tabs */
+	margin-right: 1px; /* Add space between tabs */
+    flex-grow: 1; /* Make tabs grow to fill container */
+    text-align: center; /* Center text inside tabs */
+    transition: color 0.3s, border 0.3s, background-color 0.3s;
 }
 
 .tab-link.active {
-	color: #316ff6;
-    font-weight: bold;
+	color: #eeeeee;
+    /*font-weight: bold;*/
+	background-color: #316ff6;
 	border-bottom: none;
 }
 
 .tab-link:hover {
-	color: #316ff6;
-	border-bottom: none;
+	background-color: #dfdfdf;
 }
 
 .tab-separator {
-    margin: 0 10px;
+    margin: 0 0;
     color: #ccc;
 	display: flex;
     align-items: center; /* Center align items vertically */
@@ -3332,7 +3335,7 @@ input, select, textarea {
 
 .tab-separator-border {
     border-bottom: 1px solid #316ff6; /* Adjust the border style and color as needed */
-    /*margin: 0 0; !* Adjust the margin as needed *!*/
+    margin: 0 0; /* Adjust the margin as needed */
 }
 
 .tab-content {
@@ -3423,19 +3426,14 @@ input, select, textarea {
 }
 
 #skills h2 {
-	padding-top: 1em;
+	padding-top: 10px;
 }
 
-.skill-category {
-    margin-bottom: 10px;
-}
-
-.skill-category h3 {
+.skill-category h4 {
 	border-bottom: 2px solid #316ff6;
-    padding-bottom: 10px;
     margin-left: 20px;
 	margin-right: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 1px;
     color: #787878;
 }
 
@@ -3443,27 +3441,30 @@ input, select, textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-	gap: 10px;
+	gap: 5px;
 }
 
 .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
-	width: 100px;
-	height: 100px;
+    margin: 5px;
+	width: 80px;
+	height: 80px;
 }
 
 .skill img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    width: 45px;
+    height: 45px;
+    margin: 5px 5px;
 }
 
-.skill span {
+.skills-list .skill span {
     font-size: 14px;
     color: #555;
+	margin: 0 !important;
+	padding: 0 !important;
+	line-height: 1em;
 }
 
 /* Navigation Bar */
