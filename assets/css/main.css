@@ -3534,7 +3534,7 @@ input, select, textarea {
 		display: inline-block;
 		color: white;
 		text-align: center;
-		padding: 5px 5px;
+		padding: 7px 10px;
 		text-decoration: none;
 		font-size: 17px;
 		border-bottom: none;
@@ -3584,7 +3584,7 @@ input, select, textarea {
 		display: inline-block;
 		color: white;
 		text-align: center;
-		padding: 5px 5px;
+		padding: 5px 10px;
 		text-decoration: none;
 		font-size: 17px;
 		border-bottom: none;
@@ -3642,7 +3642,7 @@ input, select, textarea {
 		display: inline-block;
 		color: white;
 		text-align: center;
-		padding: 5px 5px; /* Adjust padding as needed */
+		padding: 5px 10px; /* Adjust padding as needed */
 		text-decoration: none;
 		font-size: 17px;
 		border-bottom: none;
@@ -3718,9 +3718,9 @@ input, select, textarea {
 		display: inline-block;
 		color: white;
 		text-align: center;
-		padding: 3px 3px; /* Adjust padding as needed */
+		padding: 5px 6px; /* Adjust padding as needed */
 		text-decoration: none;
-		font-size: 14px;
+		font-size: 16px;
 		border-bottom: none;
 	}
 
@@ -3793,9 +3793,9 @@ input, select, textarea {
 		display: inline-block;
 		color: white;
 		text-align: center;
-		padding: 1px 1px; /* Adjust padding as needed */
+		padding: 5px 5px; /* Adjust padding as needed */
 		text-decoration: none;
-		font-size: 14px;
+		font-size: 16px;
 		border-bottom: none;
 	}
 
