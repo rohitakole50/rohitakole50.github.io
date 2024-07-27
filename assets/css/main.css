@@ -2590,7 +2590,7 @@ input, select, textarea {
 			margin: 0 0 1em 0;
 			display: block;
 			width: 100%;
-			height: 40%;
+			height: 200px;
 			overflow: hidden;
 		}
 
@@ -3544,6 +3544,14 @@ input, select, textarea {
 		/*background-color: #ddd;*/
 		color: black;
 	}
+
+	.work-item .image {
+		margin: 0 0 1em 0;
+		display: block;
+		width: 100%;
+		height: 144px;
+		overflow: hidden;
+	}
 }
 
 /* Large */
@@ -3585,6 +3593,14 @@ input, select, textarea {
 	#navbar ul li a:hover {
 		/*background-color: #ddd;*/
 		color: black;
+	}
+
+	.work-item .image {
+		margin: 0 0 1em 0;
+		display: block;
+		width: 100%;
+		height: 120px;
+		overflow: hidden;
 	}
 
 }
@@ -3657,6 +3673,14 @@ input, select, textarea {
         font-size: 10px;
     }
 
+	.work-item .image {
+		margin: 0 0 1em 0;
+		display: block;
+		width: 100%;
+		height: 144px;
+		overflow: hidden;
+	}
+
 }
 
 /* Small */
@@ -3724,6 +3748,14 @@ input, select, textarea {
         font-size: 10px;
     }
 
+	.work-item .image {
+		margin: 0 0 1em 0;
+		display: block;
+		width: 100%;
+		height: 100px;
+		overflow: hidden;
+	}
+
 }
 
 /* XSmall */
@@ -3790,6 +3822,14 @@ input, select, textarea {
     .skill span {
         font-size: 10px;
     }
+
+	.work-item .image {
+		margin: 0 0 1em 0;
+		display: block;
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
 
 }
 
