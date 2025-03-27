@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="images/R_and_A_logo.png" type="image/x-icon" />
+		<link rel="stylesheet" href="assets/css/all.min.css">
 	</head>
 
 	<body class="is-preload">
@@ -39,9 +40,10 @@
 		<nav id="navbar">
 			<ul>
 				<li><a href="#main">About Me</a></li>
+				<li><a href="#experience-placeholder">Experience</a></li>
 				<li><a href="#skills-placeholder">Skills</a></li>
-				<li><a href="#two">Projects</a></li>
-				<li><a href="#achievements">Achievements</a></li>
+				<li><a href="#two-placeholder">Projects</a></li>
+				<li><a href="#achievements-placeholder">Achievements</a></li>
 				<li><a href="#three">Contact</a></li>
 			</ul>
 		</nav>
@@ -58,8 +60,56 @@
 					<p class="justified-text">I am passionate about transforming data into actionable insights that drive business success. With extensive experience in data science methodologies, I thrive on solving complex problems and creating innovative solutions. My dedication to learning and curiosity about the field fuels my continuous growth and makes the journey increasingly captivating.<br /><br />
 						My expertise includes applying advanced machine learning models, enhancing market analysis accuracy, and improving decision-making through data visualization and predictive modeling. I have consistently delivered business value by reducing costs, optimizing sales forecasts, and refining customer segmentation.<br /><br/>
 						Python serves as the backbone of my journey, empowering me to tackle AI and data science challenges. Driven by curiosity and a commitment to positive impact, I leverage data to help organizations achieve their goals and make informed decisions.</p>
-			<div id="skills-placeholder"></div>
 			</section>
+
+			<div id="experience-placeholder"></div>
+
+			<!-- Work Experience -->
+			<section id="experience" class="border-top">
+				<header class="major">
+					<h2 align="center">Work Experience</h2>
+				</header>
+				<ul class="list-component">
+					<li class="__item">
+						<div class="card-component">
+							<h2 class="__year">Jan 2025 – Present</h2>
+							<h1 class="__title">Data Science Associate Intern</h1>
+							<h2 class="__company">@ Alō Index</h2>
+							<ul class="__text">
+								<li>Automated data integration from 10+ sustainability certifications using Python, enriching ESG profiles for 1,000+ hotels and improving data accuracy through verified matches.</li>
+								<li>Mapped certification criteria to 200+ evaluation questions, enabling dynamic pre-filling that saved hours of manual work per hotel and enhanced platform usability.</li>
+								<li>Collaborated closely with founders and stakeholders on product strategy and data-driven decisions, gaining direct exposure to leadership in a high-paced startup environment.</li>
+							</ul>
+						</div>
+					</li>
+					<li class="__item">
+						<div class="card-component">
+							<h2 class="__year">Jan 2025 – Present</h2>
+							<h1 class="__title">Data Science Capstone Consultant</h1>
+							<h2 class="__company">@ Stanley Black and Decker</h2>
+							<ul class="__text">
+								<li>Forecasting 12-month warranty claim volumes and costs using time series modeling on 5 years of historical data (~375K claims, 1.6M+ rows) to support strategic planning.</li>
+								<li>Leveraging LLM-based text mining on dealer communications (diagnosis and repair fields) to identify recurring issues and extract actionable insights.</li>
+								<li>Developed an interactive Tableau dashboard to present historical trends, forecast outputs, and text-driven visualizations (e.g., word clouds) for cross-functional use.</li>
+							</ul>
+						</div>
+					</li>
+					<li class="__item">
+						<div class="card-component">
+							<h2 class="__year">Jan 2025 – Present</h2>
+							<h1 class="__title">Graduate Teaching Assistant – Introduction to Deep Learning</h1>
+							<h2 class="__company">@ University of Connecticut</h2>
+							<ul class="__text">
+								<li>Evaluated graduate-level assignments with a focus on code quality, model performance, and documentation.</li>
+								<li>Delivered individualized, constructive feedback to support student learning and model implementation best practices.</li>
+								<li>Collaborated with the teaching team to maintain academic standards and ensure timely grading cycles.</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<div id="skills-placeholder"></div>
 
 			<!-- Skills and Tools -->
 			<section id="skills">
@@ -129,6 +179,7 @@
 						<div class="skill"><img src="assets/img/skills/figma-original.svg" alt="Figma"><span>Figma</span></div>
 					</div>
 				</div>
+			<div id="two-placeholder"></div>
 			</section>
 
 			<!-- Projects -->
@@ -284,6 +335,8 @@
 				</div>
 			</section>
 
+			<div id="achievements-placeholder"></div>
+
 			<!-- Achievements -->
 			<section id="achievements">
 				<header class="major">
@@ -298,8 +351,17 @@
 						<li>Promoted a culture of innovation and entrepreneurship within the club by encouraging students to work on both small-scale and large-scale projects, with the potential to turn successful projects into future ventures.</li>
 						<li>Featured in a university press article that highlighted the club's mission and impact, recognizing my leadership in fostering a supportive, growth-oriented environment for AI/ML learning at UConn.</li>
 					</ul>
-					<div class="achievement-full-image">
-						<img src="assets/img/achievements/MAIC.JPG" alt="University Highlight Screenshot">
+					<div class="achievement-slider">
+
+					  	<div class="slider-container">
+							<button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+							<img class="slide-image" src="assets/img/achievements/MAIC_Scoop_Highlight_1.JPG" alt="University Student Highlight 1" />
+							<img class="slide-image" src="assets/img/achievements/MAIC_Scoop_Highlight_2.jpg" alt="University Student Highlight 2" />
+					  		<button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+						</div>
+						<div class="slider-dot-wrapper">
+						  	<div id="slider-dots" class="slider-dots"></div>
+						</div>
 					</div>
 				</div>
 			</section>

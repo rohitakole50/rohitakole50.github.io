@@ -115,21 +115,61 @@
 		});
 
 		// Handle work item links.
-		document.addEventListener('DOMContentLoaded', function() {
-			const workItems = document.querySelectorAll('.work-item a');
+		document.addEventListener('DOMContentLoaded', function () {
+		  	// Existing popup handler
+		  	const workItems = document.querySelectorAll('.work-item a');
 
-			workItems.forEach(item => {
-				item.addEventListener('click', function(event) {
-					const action = item.getAttribute('data-action');
+		  	workItems.forEach(item => {
+				item.addEventListener('click', function (event) {
+			  	const action = item.getAttribute('data-action');
 
-					if (action === 'popup') {
-						event.preventDefault();
-						// Poptrox will handle the popup, so no need for additional code here
-					} else if (action === 'link') {
-						// Do nothing, let the default behavior happen
+			  	if (action === 'popup') {
+					event.preventDefault();
+					// Poptrox will handle the popup
+			  	} else if (action === 'link') {
+					// Let the default behavior happen
+			  	}
+				});
+		  	});
+
+		  	// 🚀 Slider Logic
+		  	// 🚀 Slider Logic with Dots
+			let currentSlide = 0;
+			const slides = document.querySelectorAll('.slide-image');
+			const dotsContainer = document.getElementById('slider-dots');
+
+			// Function to display a slide
+			function showSlide(index) {
+				slides.forEach((slide, i) => {
+					slide.classList.toggle('active', i === index);
+					if (dotsContainer?.children[i]) {
+						dotsContainer.children[i].classList.toggle('active', i === index);
 					}
 				});
+			}
+
+			// Function to change slide from buttons
+			window.changeSlide = function (direction) {
+				currentSlide += direction;
+				if (currentSlide < 0) currentSlide = slides.length - 1;
+				if (currentSlide >= slides.length) currentSlide = 0;
+				showSlide(currentSlide);
+			};
+
+			// Create navigation dots
+			slides.forEach((_, index) => {
+				const dot = document.createElement('div');
+				dot.classList.add('slider-dot');
+				if (index === 0) dot.classList.add('active');
+				dot.addEventListener('click', () => {
+					currentSlide = index;
+					showSlide(currentSlide);
+				});
+				dotsContainer?.appendChild(dot);
 			});
+
+			// Show the first slide initially
+			showSlide(currentSlide);
 		});
 
 	// Tab Functionality

@@ -1769,7 +1769,7 @@ pre code {
 	header p {
 		color: #b2b2b2;
 		position: relative;
-		margin: 0 0 1.5em 0;
+		margin: 0 0 1em 0;
 	}
 
 	header h2 + p {
@@ -2731,16 +2731,19 @@ pre code {
 	}
 
 		#main > section {
-			border-top: solid 2px #efefef;
-			margin: 4em 0 0 0;
-			padding: 2em 0 0 0;
+			margin-top: 1em;
+			padding-top: 2em;
 		}
 
-			#main > section:first-child {
-				border-top: 0;
-				margin-top: 0;
-				padding-top: 0;
-			}
+		#main > section.border-top {
+			border-top: solid 2px #efefef;
+		}
+
+		#main > section:first-child {
+			border-top: 0;
+			margin-top: 0;
+			padding-top: 0;
+		}
 
 /* Poptrox */
 
@@ -3410,9 +3413,82 @@ pre code {
 			color: rgba(255, 255, 255, 0.4);
 		}
 
+/* Work Experience Section */
+.list-component {
+  border-left: 2px solid #ccc;
+  list-style: none;
+  padding-left: 0.90em;
+  padding-top: 20px;
+  margin-left: 0;
+  position: relative;
+}
+
+.list-component .__item {
+  position: relative;
+  margin-bottom: 2em;
+  padding-left: 2em;
+}
+
+.list-component .__item::before {
+  content: "\f0b1"; /* Briefcase icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.1em;
+  color: #316ff6;
+  position: absolute;
+  left: 0; /* Sit right on the border */
+  top: 2.75em;
+  transform: translateX(-135%); /* Center the icon on the line */
+  background: #fff; /* Optional: keep background clean */
+  z-index: 1;
+}
+
+.card-component {
+  	border: 1px solid gray;
+  	border-radius: 5px;
+  	padding: 1.5em 1.5em 0 1.5em; /* top, right, bottom, left */
+  	max-width: auto;
+  	font-family: Arial, sans-serif;
+  	position: relative;
+}
+
+.card-component .__year {
+  	font-size: 0.9em;
+  	color: #666;
+  	margin-bottom: 0.3em;
+}
+
+.card-component .__title {
+  	font-size: 1.1em;
+  	font-weight: bold;
+  	color: #222;
+  	line-height: 1.4em;
+  	margin-bottom: 0.5em; /* Smaller gap to keep title and employer closer */
+}
+
+.card-component .__company {
+  font-size: 1em;
+  font-weight: 500;
+  margin-top: -0.5em;
+  color: #222;
+}
+
+.card-component .__text {
+  	color: #555;
+  	font-size: 0.9em;
+	padding-left: 1.2em;
+	text-align: justify;
+}
+
+.card-component .__text li {
+	margin-bottom: 0.3em;
+	list-style-type: disc;
+}
+
+
 /* Skills Section */
 #skills {
-    max-width: 900px;
+    max-width: 0 auto;
     margin: 50px auto;
     padding: 10px;
     background-color: #fff;
@@ -3465,12 +3541,12 @@ pre code {
 
 /* Achievements Section */
 #achievements {
-    max-width: 900px;
+    max-width: 0 auto;
     margin: 50px auto;
-    padding: 5px;
+    padding: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 10px;
     border-top: solid 2px #efefef;
 }
 
@@ -3485,50 +3561,246 @@ pre code {
 
 .achievement-category h4 {
     border-bottom: 1px solid #316ff6;
-    margin-left: 20px;
-	margin-right: 20px;
-	margin-bottom: 5px;
+    margin: 0 20px 10px 20px;
     color: #787878;
 }
 
+
 .achievement-list {
-    margin-left: 40px;
-    margin-right: 20px;
+    margin: 0 20px 0 40px;
     color: #555;
     font-size: 16px;
     line-height: 1.6em;
+    padding: 0;
+    text-align: justify; /* Justify the text inside bullets */
 }
 
 .achievement-list li {
-    margin-bottom: 10px;
+    margin: 20px 0; /* Equal spacing above and below */
 }
 
 .achievement-image {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 /* Custom class for achievement section images */
-.achievement-full-image {
-    width: 100%;  /* Container takes full width */
-    max-width: 100%;  /* Ensures no max-width restrictions */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0 20px 0;  /* Optional: adds some spacing */
+/* Default (Large screens) */
+.achievement-slider {
+  display: flex;
+  flex-direction: column; /* Stack image and dots vertically */
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
 }
 
-.achievement-full-image img {
-    width: auto;  /* Use the image's natural width */
-    height: auto; /* Maintain the aspect ratio */
-    max-width: 90%; /* Prevent overflow within container */
-    max-height: 90%; /* Ensures no vertical scaling */
-    object-fit: contain; /* Ensures the image fits nicely within the container */
-    image-rendering: -webkit-optimize-contrast; /* Improves sharpness in Chrome */
-    image-rendering: crisp-edges; /* Keeps edges sharp on most browsers */
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+
+.slider-container {
+  width: 100%;
+  max-width: 900px;
+  height: 620px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.slide-image {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide-image.active {
+  display: block;
+}
+
+
+/* Arrows now inside the image container */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #316ff6;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: background-color 0.2s ease;
+}
+
+.slider-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #003f8f;
+}
+
+.slider-btn.prev {
+  left: 15px;
+}
+
+.slider-btn.next {
+  right: 15px;
+}
+
+/* Responsive tweak for small screens */
+@media screen and (max-width: 736px) {
+  .slider-btn {
+    font-size: 1.5rem;
+    padding: 0.3em 0.5em;
+  }
+
+  .slider-btn.prev {
+    left: 5px;
+  }
+
+  .slider-btn.next {
+    right: 5px;
+  }
+}
+/* ≤ 1280px: slightly reduce height */
+@media screen and (max-width: 1280px) {
+  .slider-container {
+    height: 560px;
+  }
+
+  .slide-image {
+    object-position: top center;
+  }
+}
+
+/* ≤ 980px: switch to contain for better visibility */
+@media screen and (max-width: 980px) {
+  .slider-container {
+    height: auto;
+  }
+
+  .slide-image {
+    object-fit: contain;
+    max-height: 500px;
+    width: 100%;
+  }
+}
+
+/* ≤ 736px: smaller image, less height */
+@media screen and (max-width: 736px) {
+  .slider-container {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+  }
+
+  .slider-btn {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+}
+
+/* ≤ 480px: smallest layout */
+@media screen and (max-width: 480px) {
+  .slide-image {
+    max-height: 320px;
+  }
+
+  .slider-btn {
+    font-size: 1.2em;
+    padding: 5px;
+  }
+}
+
+/*Slider Dot Styling*/
+.slider-dots {
+  display: flex;
+  align-items: center;  /* vertically center dots */
+  justify-content: center;
+  gap: 12px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
+
+.slider-dot.active {
+  background-color: #316ff6;
+}
+
+.slider-dot.active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #316ff6;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.slider-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.slider-dot-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 16px;
+  height: auto; /* Let content decide height */
+}
+
+/*.achievement-full-image {*/
+/*    width: 100%;  !* Container takes full width *!*/
+/*    max-width: 100%;  !* Ensures no max-width restrictions *!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin: 10px 0 20px 0;  !* Optional: adds some spacing *!*/
+/*}*/
+
+/*.achievement-full-image img {*/
+/*    width: auto;  !* Use the image's natural width *!*/
+/*    height: auto; !* Maintain the aspect ratio *!*/
+/*    max-width: 90%; !* Prevent overflow within container *!*/
+/*    max-height: 90%; !* Ensures no vertical scaling *!*/
+/*    object-fit: contain; !* Ensures the image fits nicely within the container *!*/
+/*    image-rendering: -webkit-optimize-contrast; !* Improves sharpness in Chrome *!*/
+/*    image-rendering: crisp-edges; !* Keeps edges sharp on most browsers *!*/
+/*    border-radius: 8px; !* Optional: rounded corners *!*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); !* Optional: subtle shadow *!*/
+/*}*/
 
 /* Navigation Bar */
 #navbar {
