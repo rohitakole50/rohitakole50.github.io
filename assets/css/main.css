@@ -37,6 +37,11 @@ body {
     text-align: justify;
 }
 
+.justified-text strong,
+.justified-text b {
+  font-weight: bold !important;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -137,7 +142,8 @@ em, i {
 }
 
 p {
-	margin: 0 0 2em 0;
+	margin: 0 0 1em 0;
+	color: #787878;
 }
 
 h1, h2, h3, h4, h5, h6 {
