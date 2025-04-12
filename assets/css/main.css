@@ -3303,9 +3303,11 @@ pre code {
 /* Tabs Container */
 .tab-container {
     display: flex;
-    justify-content: space-evenly;
-	background-color: #eeeeee;
-	padding: 0; /* Remove any padding */
+    background-color: #eeeeee;
+    padding: 0;
+    width: 100%;
+    max-width: 960px; /* Match your project grid width */
+    margin: 0 auto;    /* Center the tabs horizontally */
 }
 
 .tab-link {
