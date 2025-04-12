@@ -3303,22 +3303,21 @@ pre code {
 /* Tabs Container */
 .tab-container {
     display: flex;
-    background-color: #eeeeee;
-    padding: 0;
-    width: 100%;
-    max-width: 960px; /* Match your project grid width */
-    margin: 0 auto;    /* Center the tabs horizontally */
+    justify-content: space-evenly;
+	background-color: #eeeeee;
+	padding: 0; /* Remove any padding */
 }
 
+/* Tab Links */
 .tab-link {
-    padding: 1px 20px;
+    flex: 1; /* Equal width for all tabs */
+    padding: 12px 0;
     cursor: pointer;
     color: #333;
     text-decoration: none;
-	border: 2px solid transparent; /* Add border for inactive tabs */
-	margin-right: 1px; /* Add space between tabs */
-    flex-grow: 1; /* Make tabs grow to fill container */
-    text-align: center; /* Center text inside tabs */
+    border: 2px solid transparent;
+    margin: 0; /* Remove spacing between tabs for flush fit */
+    text-align: center;
     transition: color 0.3s, border 0.3s, background-color 0.3s;
 }
 
