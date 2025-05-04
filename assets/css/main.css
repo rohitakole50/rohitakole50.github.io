@@ -3546,6 +3546,24 @@ pre code {
 	line-height: 1em;
 }
 
+/* Projects Section */
+.scrollable-projects {
+  max-height: 1050px; /* Adjust based on how tall 6 projects are */
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Optional scrollbar styling (Webkit browsers) */
+.scrollable-projects::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-projects::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+
 /* Achievements Section */
 #achievements {
     max-width: 0 auto;
