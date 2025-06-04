@@ -3758,10 +3758,16 @@ pre code {
 	animation: fadeIn 0.3s ease;
 }
 
-.achievement-card.open .achievement-details,
-.achievement-card:hover .achievement-details {
-  	display: block;
+.achievement-card.open .achievement-details {
+	display: block;
 }
+
+@media (hover: hover) {
+	.achievement-card:hover .achievement-details {
+		display: block;
+	}
+}
+
 
 .achievement-details ul {
 	padding-left: 1.2em;

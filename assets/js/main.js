@@ -262,12 +262,13 @@
 		animateSkills(); // Run on page load in case skills are already in view
 	});
 
-	let tappedInsideCard = false;
+	let clickedCard = false;
 
-	// Toggle card open/close
+	// Handle card toggle
 	function setupCardToggles(cardType) {
 		document.querySelectorAll(`.${cardType}-card`).forEach(card => {
-			card.addEventListener('pointerup', (e) => {
+			card.addEventListener('click', (e) => {
+				clickedCard = true;
 				e.stopPropagation();
 				card.classList.toggle('open');
 			});
@@ -277,15 +278,19 @@
 	setupCardToggles('experience');
 	setupCardToggles('achievement');
 
-	// Collapse all cards if tap/click is outside *any* card
-	document.addEventListener('pointerup', function (e) {
-		const isInsideCard = e.target.closest('.experience-card') || e.target.closest('.achievement-card');
-		if (!isInsideCard) {
-			document.querySelectorAll('.experience-card.open, .achievement-card.open').forEach(card => {
-				card.classList.remove('open');
-			});
-		}
+	// Click outside to close all cards, but only if a card wasn't clicked
+	document.addEventListener('click', function () {
+		setTimeout(() => {
+			if (!clickedCard) {
+				document.querySelectorAll('.experience-card.open, .achievement-card.open').forEach(card => {
+					card.classList.remove('open');
+				});
+			}
+			clickedCard = false; // Reset after every interaction
+		}, 0);
 	});
+
+
 
 	// // Experience Card Toggle OLD CODE
 	// document.querySelectorAll('.experience-card').forEach(card => {
