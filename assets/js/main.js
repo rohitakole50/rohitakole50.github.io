@@ -262,24 +262,29 @@
 		animateSkills(); // Run on page load in case skills are already in view
 	});
 
-	// Experience Card Toggle
-	document.querySelectorAll('.experience-card').forEach(card => {
-		card.addEventListener('click', (e) => {
-			e.stopPropagation(); // Prevent bubbling to document
-			card.classList.toggle('open');
-		});
-	});
+	function toggleCard(card) {
+		card.classList.toggle('open');
+	}
 
-	// Achievement Card Toggle
-	document.querySelectorAll('.achievement-card').forEach(card => {
+	document.querySelectorAll('.experience-card, .achievement-card').forEach(card => {
 		card.addEventListener('click', (e) => {
-			e.stopPropagation(); // Prevent bubbling to document
-			card.classList.toggle('open');
+			e.stopPropagation();
+			toggleCard(card);
+		});
+		card.addEventListener('touchend', (e) => {
+			e.stopPropagation();
+			toggleCard(card);
 		});
 	});
 
 	// Close all cards if clicking outside
 	document.addEventListener('click', function () {
+		document.querySelectorAll('.experience-card.open, .achievement-card.open').forEach(card => {
+			card.classList.remove('open');
+		});
+	});
+
+	document.addEventListener('touchend', function () {
 		document.querySelectorAll('.experience-card.open, .achievement-card.open').forEach(card => {
 			card.classList.remove('open');
 		});
