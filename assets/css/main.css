@@ -3574,9 +3574,12 @@ pre code {
   	animation: fadeIn 0.3s ease;
 }
 
-.experience-card.open .popover-content,
-.experience-card:hover .popover-content {
-  	display: block;
+.experience-card.open .popover-content {
+	display: block;
+}
+
+.has-hover .experience-card:hover .popover-content {
+	display: block;
 }
 
 @keyframes fadeIn {
@@ -3762,12 +3765,9 @@ pre code {
 	display: block;
 }
 
-@media (hover: hover) {
-	.achievement-card:hover .achievement-details {
-		display: block;
-	}
+.has-hover .achievement-card:hover .achievement-details {
+	display: block;
 }
-
 
 .achievement-details ul {
 	padding-left: 1.2em;

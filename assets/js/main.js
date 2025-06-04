@@ -264,8 +264,8 @@
 
 	// Experience Card Toggle
 	document.addEventListener("DOMContentLoaded", () => {
-		function toggleCard(cardSelector) {
-			document.querySelectorAll(cardSelector).forEach(card => {
+		function toggleCard(selector) {
+			document.querySelectorAll(selector).forEach(card => {
 				card.addEventListener("click", function (e) {
 					e.stopPropagation();
 					this.classList.toggle("open");
@@ -273,24 +273,27 @@
 			});
 		}
 
-		toggleCard(".achievement-card");
 		toggleCard(".experience-card");
+		toggleCard(".achievement-card");
 
-		// Close cards on outside click — run AFTER toggle
 		document.addEventListener("click", (e) => {
-			const isCard = e.target.closest(".achievement-card") || e.target.closest(".experience-card");
+			const isCard = e.target.closest(".experience-card") || e.target.closest(".achievement-card");
 			if (!isCard) {
-				document.querySelectorAll(".achievement-card.open, .experience-card.open").forEach(card => {
+				document.querySelectorAll(".experience-card.open, .achievement-card.open").forEach(card => {
 					card.classList.remove("open");
 				});
 			}
 		});
 	});
 
-	document.addEventListener("click", (e) => {
-		console.log("Clicked:", e.target);
-	});
+	const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+	const isHoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
+	if (!isTouch && isHoverCapable) {
+		document.documentElement.classList.add("has-hover");
+	} else {
+		document.documentElement.classList.remove("has-hover");
+	}
 
 
 
