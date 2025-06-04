@@ -262,28 +262,35 @@
 		animateSkills(); // Run on page load in case skills are already in view
 	});
 
-	// Experience Card Toggle
-	document.querySelectorAll('.experience-card').forEach(card => {
-		card.addEventListener('click', (e) => {
-			e.stopPropagation(); // Prevent bubbling to document
-			card.classList.toggle('open');
+	let tappedInsideCard = false;
+
+	// Toggle card open/close
+	function setupCardToggles(cardType) {
+		document.querySelectorAll(`.${cardType}-card`).forEach(card => {
+			card.addEventListener('pointerup', (e) => {
+				tappedInsideCard = true; // Mark that user tapped a card
+				e.stopPropagation();
+				card.classList.toggle('open');
+			});
 		});
+	}
+
+	setupCardToggles('experience');
+	setupCardToggles('achievement');
+
+	// Collapse all cards if tap was outside
+	document.addEventListener('pointerup', function () {
+		// Delay to allow card handler to finish and set the flag
+		setTimeout(() => {
+			if (!tappedInsideCard) {
+				document.querySelectorAll('.experience-card.open, .achievement-card.open').forEach(card => {
+					card.classList.remove('open');
+				});
+			}
+			tappedInsideCard = false; // Reset after every interaction
+		}, 0);
 	});
 
-	// Achievement Card Toggle
-	document.querySelectorAll('.achievement-card').forEach(card => {
-		card.addEventListener('click', (e) => {
-			e.stopPropagation(); // Prevent bubbling to document
-			card.classList.toggle('open');
-		});
-	});
-
-	// Close all cards if clicking outside
-	document.addEventListener('click', function () {
-		document.querySelectorAll('.experience-card.open, .achievement-card.open').forEach(card => {
-			card.classList.remove('open');
-		});
-	});
 
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
