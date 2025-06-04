@@ -268,7 +268,6 @@
 	function setupCardToggles(cardType) {
 		document.querySelectorAll(`.${cardType}-card`).forEach(card => {
 			card.addEventListener('pointerup', (e) => {
-				tappedInsideCard = true; // Mark that user tapped a card
 				e.stopPropagation();
 				card.classList.toggle('open');
 			});
@@ -278,17 +277,14 @@
 	setupCardToggles('experience');
 	setupCardToggles('achievement');
 
-	// Collapse all cards if tap was outside
-	document.addEventListener('pointerup', function () {
-		// Delay to allow card handler to finish and set the flag
-		setTimeout(() => {
-			if (!tappedInsideCard) {
-				document.querySelectorAll('.experience-card.open, .achievement-card.open').forEach(card => {
-					card.classList.remove('open');
-				});
-			}
-			tappedInsideCard = false; // Reset after every interaction
-		}, 0);
+	// Collapse all cards if tap/click is outside *any* card
+	document.addEventListener('pointerup', function (e) {
+		const isInsideCard = e.target.closest('.experience-card') || e.target.closest('.achievement-card');
+		if (!isInsideCard) {
+			document.querySelectorAll('.experience-card.open, .achievement-card.open').forEach(card => {
+				card.classList.remove('open');
+			});
+		}
 	});
 
 	// // Experience Card Toggle OLD CODE
