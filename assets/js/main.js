@@ -262,6 +262,29 @@
 		animateSkills(); // Run on page load in case skills are already in view
 	});
 
+	// Experience Card Toggle
+	document.querySelectorAll('.experience-card').forEach(card => {
+		card.addEventListener('click', (e) => {
+			e.stopPropagation(); // Prevent bubbling to document
+			card.classList.toggle('open');
+		});
+	});
+
+	// Achievement Card Toggle
+	document.querySelectorAll('.achievement-card').forEach(card => {
+		card.addEventListener('click', (e) => {
+			e.stopPropagation(); // Prevent bubbling to document
+			card.classList.toggle('open');
+		});
+	});
+
+	// Close all cards if clicking outside
+	document.addEventListener('click', function () {
+		document.querySelectorAll('.experience-card.open, .achievement-card.open').forEach(card => {
+			card.classList.remove('open');
+		});
+	});
+
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
