@@ -3474,6 +3474,16 @@ pre code {
   	z-index: 2;               /* higher than .card-component */
 }
 
+/* 🎓 Education icon */
+.list-component .education-entry::before {
+  	content: "\f19d"; /* Graduation cap */
+}
+
+/* 🧳 Work icon */
+.list-component .work-entry::before {
+  	content: "\f0b1"; /* Briefcase */
+}
+
 #experience {
   	max-width: 100% !important;
   	width: 100%;
